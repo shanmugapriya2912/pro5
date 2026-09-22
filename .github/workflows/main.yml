@@ -1,0 +1,20 @@
+name: Linux Security Autograding
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  security-tests:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      # Add your autograding or security testing steps below:
+      - name: Run tests
+        run: |
+          echo "Running security autograding tests..."
